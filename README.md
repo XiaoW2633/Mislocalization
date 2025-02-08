@@ -6,6 +6,8 @@ Run misloc_trans.ipynb to reproduce fig2a, fig3 and fig4.
 Run misloc_persis.ipynb to reproduce fig5.
 
 ## Data analysis
+Data was deposited on Mendeley as WANG, XIAO (2025), “Mislocalization”, Mendeley Data, V1, doi: 10.17632/2p5vhm2w8n.1.
+
 Navigate to the folder Data/ and execute mis_loc_v4.m to generate the data required for plotting the figures.
 
 To create Fig6a and 6b, run plot_all.m.
