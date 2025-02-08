@@ -9,7 +9,7 @@ Run misloc_persis.ipynb to reproduce fig5.
 # Data analysis
 Go to the folder Data/ and run mis_loc_v4.m first to generate the data for ploting figures.
 
-Use plot_all.m to plot fig 6a and 6b. 
+Use plot_all.m to plot fig6a and 6b. 
 
 Use plot_combine.m to plot fig6c. 
 
