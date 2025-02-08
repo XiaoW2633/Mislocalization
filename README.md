@@ -7,13 +7,13 @@ Run misloc_trans.ipynb to reproduce fig2a, fig3 and fig4.
 Run misloc_persis.ipynb to reproduce fig5.
 
 # Data analysis
-Go to the folder Data/ and run mis_loc_v4.m first to generate the data for ploting figures.
+Navigate to the folder Data/ and execute mis_loc_v4.m to generate the data required for plotting the figures.
 
-Use plot_all.m to plot fig6a and 6b. 
+To create Fig6a and 6b, run plot_all.m.
 
-Use plot_combine.m to plot fig6c. 
+For Fig6c, run plot_combine.m.
 
-Use plot_time_dist.m to plot fig6d.
+For Fig6d, run plot_time_dist.m.
 
 
 
