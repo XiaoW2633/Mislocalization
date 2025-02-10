@@ -22,36 +22,13 @@ para.drawHeatmap = 0; % Flag for drawing the heatmap of receptive field.
 % if para.subset is empty, run all the cells, otherwise only run those with 
 % indeces manually in para.subset.
 para.subset = []; 
-% %para.subset = [321   323   339   341   342   343   345]; % oblique cells' indeces;
+
 %% define data and result paths.
 %para.data_root = '/Users/wangxiao/Desktop/model/FEFLIP/';
-para.data_root='/Users/wangxiao/Desktop/torch/RFdataset/';% cell report dataset path
-para.datatime_root = '/Users/wangxiao/Desktop/matlab/LIP-FEF-data-analysis/misloc/runData/';% misloc. dataset path
+%para.data_root='/Users/wangxiao/Desktop/torch/RFdataset/';% cell report dataset path
+para.datatime_root = '/Users/wangxiao/Desktop/matlab/LIP-FEF-data-analysis/misloc/runData/';% path to the dataset folder
 
 para.time_names={'FEF_MisLoc/','LIP_MisLoc/'}; % misloc. dataset path
-%para.time_names={'FEF/','LIP/'}; % misloc. dataset path PNAS paper path
-
-%para.new_time_names={'test_FEF2/','test_LIP2/'}
-%para.file_names={'all_pop_FEF4/','all_pop_LIP5/'}; % dataset folder
-% 2 is repeated 0~100ms
-% 4 is repeated -50~200ms crf 50~200
-% 5 is repeated -50~200 ms crf 50~300ms
-% 0 is repeared 0~100ms crf 50~150ms
-% 6 is subtract the baseline no nomalization
-%para.results_root = '/Users/wangxiao/Desktop/matlab/FEFLIP/results/';
-%brain_dataset = para.file_names{para.brainFlag };
-%para.sufix_dataset = brain_dataset(end-5:end-1);
-
-%% organization of results folder
-% Confusing dir structure ??
-% /results   % put time stamp ast this level?? then brain area, then alignment, then heatmap ??
-%    --/FEF   : results  of FEF (polar,vector and time course)
-%         --/probeon  : dRF pRF and heatmap folder
-%         --/sacoff  :  pRF results and heatmap folder
-%    --/LIP    : results of LIP (polar,vector and time course)
-%         --/probeon  : dRF  pRF results and heatmap folder
-%         --/sacoff  : pRF results and heatmap folder
-
 
 para.nboot = 1000; % number of samples for bootstrap
 para.intpItv = 0.1;
