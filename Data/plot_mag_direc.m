@@ -1,4 +1,5 @@
 close all
+%clear all
 figure;
 x0=10;
 y0=10;
@@ -10,7 +11,7 @@ brain = 'LIP';
 % ind = 2,new data
 % ind = 3,new data valid
 ind = '0';
-%mean_prf = circular_mean(tot_prf_direc)*180/pi;
+
 datafile1=['timecourse/',brain,ind,'.mat'];
 if brain == 'LIP'
 
@@ -25,7 +26,7 @@ mean_target= -27.9328;
 mean_fixation = -87.2894;
 N=113;
 end
-%load(datafile1)
+load(datafile1)
 %tot_theta_radian = time_shift_direc;
 tot_theta_radian = time_shift_direc;
 
@@ -44,12 +45,12 @@ options.line_width = 2;
 
 
 
-if(isfield(options,'x_axis')==0), options.x_axis =para.sbin; end
+if(isfield(options,'x_axis')==0), options.x_axis =parameter.sbin; end
 options.x_axis = options.x_axis(:);
 %options.x_axis = para.sbin;
 x_vector = [options.x_axis', fliplr(options.x_axis')];
 % Computing the mean and standard deviation of the data matrix
-early_shift_mag = time_shift_mag;
+%early_shift_mag = time_shift_mag;
 data_mean1 = nanmean(early_shift_mag,1);
 data_std1  = nanstd(early_shift_mag,0,1);
 error = (data_std1./sqrt(size(early_shift_mag,1)));

@@ -1,6 +1,4 @@
-% plot time course with overlab
-
-
+% plot fig6a and 6b
 
 %cd('/Users/wangxiao/Desktop/matlab/LIP-FEF-data-analysis/misloc/runcode');
 close all

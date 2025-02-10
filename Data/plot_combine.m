@@ -1,3 +1,4 @@
+% Plot fig6c
 clear;
 close all
 brain = 'LIP';

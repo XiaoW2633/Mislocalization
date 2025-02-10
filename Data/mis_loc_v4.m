@@ -167,16 +167,7 @@ for ncell= 1:loop_cells(end)%
            tmp_magnitude_early(sbin) = early_thetaNmag.crf2prfMag./cordn.sacamp;
            tmp_magnitude_late(sbin) = late_thetaNmag.crf2prfMag./cordn.sacamp;
            
-            % vecs(:,para.CRF2FRF:para.CRF2FRF+1);
-            % vecs(:,para.CRF2PRF:para.CRF2PRF+1);
-%              early_proj =...
-%             dot(early_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1),...
-%                  early_rfvec_bin(:,parameter.CRF2PRF:parameter.CRF2PRF+1));
-%              early_proj = early_proj./norm(early_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1));
-%              late_proj =...
-%             dot(late_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1),...
-%                  late_rfvec_bin(:,parameter.CRF2PRF:parameter.CRF2PRF+1));
-%             late_proj = late_proj./norm(late_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1));
+    
 
         end
         early_shift_mag     =  [early_shift_mag;tmp_magnitude_early];
@@ -202,58 +193,3 @@ if parameter.alignFlag ==4
 
  save(['nonoverlap/',filename,parameter.saveId,'.mat'],'early_shift_mag','late_shift_mag','early_late_shift');
 end
-% vecs(:,para.CRF2FRF:para.CRF2FRF+1);
-            % vecs(:,para.CRF2PRF:para.CRF2PRF+1);
-%              early_proj =...
-%             dot(early_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1),...
-%                  early_rfvec_bin(:,parameter.CRF2PRF:parameter.CRF2PRF+1));
-%              early_proj = early_proj./norm(early_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1));
-%              late_proj =...
-%             dot(late_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1),...
-%                  late_rfvec_bin(:,parameter.CRF2PRF:parameter.CRF2PRF+1));
-%             late_proj = late_proj./norm(late_rfvec_bin(:,parameter.CRF2FRF:parameter.CRF2FRF+1));
-% early_shift = mean(early_shift_mag(:,end-100:end),2);
-% late_shift = mean(late_shift_mag(:,end-100:end),2);
-% early_mean = nanmean(early_shift);
-% late_mean = nanmean(late_shift);
-% early_sem = nanstd(early_shift)/sqrt(length(early_shift));
-% late_sem = nanstd(late_shift)/sqrt(length(late_shift));
-% 
-% l1 = bar([1],early_mean,'edgecolor','r','facecolor','none','linewidth',2,'DisplayName','Early');
-% hold on
-% l2 = bar([2],late_mean,'edgecolor','b','facecolor','none','linewidth',2,'DisplayName','Late');
-% hold on
-% legend('Early','Late');
-% ylabel('Norm. shift magnitude');
-% ylim([0,1.2]);
-% hold on
-% errorbar([1,2],[early_mean,late_mean],[early_sem,late_sem],'k.','linewidth',2);
-% hold on
-% [h,pv] = ttest(early_shift,late_shift);
-
-% % OrigData=magic(3);
-% X=randperm(numel(OrigData));
-% ShuffledData=reshape(OrigData(X),size(OrigData))
-% prctile
-
-% hold on
-% legend('Early','Late');
-% ylabel('Norm. shift magnitude');
-% ylim([0,1.2]);
-% hold on
-% errorbar([1,2],[early_mean,late_mean],[early_sem,late_sem],'k.','linewidth',2);
-% hold on
-% [h,pv] = ttest(early_shift,late_shift);
-                                                                                 
-% % OrigData=magic(3);
-% X=randperm(numel(OrigData));
-% ShuffledData=reshape(OrigData(X),size(OrigData))
-% prctile
-% hold on
-% legend('Early','Late');
-% ylabel('Norm. shift magnitude');
-% ylim([0,1.2]);
-% hold on
-% errorbar([1,2],[early_mean,late_mean],[early_sem,late_sem],'k.','linewidth',2);
-% hold on
-% [h,pv] = ttest(early_shift,late_shift);
